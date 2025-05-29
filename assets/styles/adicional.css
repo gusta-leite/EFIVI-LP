@@ -1,0 +1,7 @@
+img{
+    height: 50vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    bottom: 0;
+}
