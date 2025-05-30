@@ -19,4 +19,15 @@ document.querySelectorAll('.sidebar-right, .sidebar-left').forEach(elemento => {
 
 // change colors
 
-/* document.body.classList.add("dark"); */
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.create({
+    trigger: ".headline",
+    start: "top center",
+    end: "+=2500",
+    toggleClass: {
+        targets: "body", 
+        className: "dark" 
+    },
+   // markers: true
+});
