@@ -17,7 +17,7 @@
 </head>
 
 <body class="">
-    <section> <!-- Cursores-->
+    <section class="not-mobile"> <!-- Cursores-->
         <div class="cursor">
             <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g style="mix-blend-mode:exclusion">
@@ -40,31 +40,34 @@
                         <h3 class=" navbar-text">EFVI - EFICIENTE VISUAL</h3>
                     </div>
                     <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"">
-                        <h3 class="navbar-text">SOBRE NÓS</h3>
+                        <h3 class=" navbar-text">SOBRE NÓS</h3>
                     </div>
                     <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"">
-                        <h3 class="navbar-text">NOSSO PROJETO</h3>
+                        <h3 class=" navbar-text">NOSSO PROJETO</h3>
                     </div>
                     <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"">
-                        <h3 class="navbar-text">CONTATO</h3>
+                        <h3 class=" navbar-text">CONTATO</h3>
                     </div>
                 </div>
             </section>
-
-
+            <div style="height: 5px;" class="not-mobile"></div>
+            <div style="height: 2px;" class="not-pc"></div>
             <section class=" hero"> <!-- Tela inicial-->
-                        <div class="hero-content">
-                            <img src="assets/img/Img - Hero.png" alt="Mulher de Óculos" class="hero-image">
-                            <div class="hero-text-container">
-                                <br><br><br><br>
-                                <h3>EFIVI - EFICIENTE VISUAL</h3>
-                                <h1>VENDO O MUNDO</h1>
-                                <p>Através da <span>tecnologia</span></p>
-                                <p>⠞⠑⠉⠝⠕⠇⠕⠛⠊⠁</p>
-                            </div>
-                        </div>
+                <div class="hero-content">
+                    <img src="assets/img/Img - Hero.png" alt="Mulher de Óculos" class="hero-image not-mobile">
+                    <div class="hero-text-container">
+                        <div class="not-mobile"><br><br><br></div>
+                        <br>
+                        <h3>EFIVI - EFICIENTE VISUAL</h3>
+                        <h1>VENDO O MUNDO</h1>
+                        <p>Através da <span>tecnologia</span></p>
+                        <p>⠞⠑⠉⠝⠕⠇⠕⠛⠊⠁</p>
+                    </div>
+                    <img src="assets/img/Img - Hero.png" alt="Mulher de Óculos" class="hero-image not-pc">
+                </div>
             </section>
-
+            <div style="height: 5px;" class="not-mobile"></div>
+            <div style="height: 2px;" class="not-pc"></div>
             <section class="about"> <!-- Sobre nos-->
                 <div class="about-content">
                     <div class="about-element">
@@ -84,12 +87,16 @@
                             profissional do deficiente visual, integrando-o na sociedade. </P>
                     </div>
                 </div>
+                <div style="height: 2px;" class="not-pc"></div>
+                <div style="height: 5px;" class="not-mobile"></div>
                 <div class="headline">
+
                     <h1> INCLUSÃO E FUTURO, <span>JUNTOS</span> </h1>
                     <h1 class="headline-braile"> ⠞⠑⠉⠝⠕⠇⠕⠛⠊⠁ ⠑ ⠋⠥⠞⠥⠗⠕ </h1>
                 </div>
             </section>
-            <div style="height: 5px;"></div>
+            <div style="margin-top: 4px;" class="not-pc"></div>
+            <div style="margin-top: 10px;" class="not-mobile"></div>
             <section class="about-expanded"> <!-- Sobre nos expandido-->
                 <div class="aboutex-content">
                     <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
@@ -104,8 +111,8 @@
                                 <br>• Reparo e manutenção de impressoras
                                 <br>• Montagem de computador
                                 <br>• Arduino
-                                <br>• Conserto de monitores
-                                <br>• Reparo de lâmpadas Led
+                                <span class="not-mobile"><br>• Conserto de monitores</span>
+                                <span class="not-mobile"><br>• Reparo de lâmpadas Led</span>
                             </P>
                         </div>
                     </div>
@@ -117,7 +124,7 @@
                                 melhor integração no mercado de trabalho.
                                 Veja abaixo, nossos antigos alunos: </P>
                         </div>
-                        <div class="" style="--rows: span 1; --columns: 1 / -1;">
+                        <div style="--rows: span 1; --columns: 1 / -1;">
                             <img src="assets/img/Img - Center Aboutex.png" class="img-aboutex-center bdr"
                                 alt="Alunos do curso">
                         </div>
@@ -136,25 +143,29 @@
                     </div>
                 </div>
             </section>
-            <div style="height: 5px;"></div>
+            <div style="height: 2px;" class="not-pc"></div>
+            <div style="height: 5px;" class="not-mobile"></div>
             <section class="ajuda"> <!-- ajuda e marketplace-->
                 <div class="ajuda-content">
                     <div class="ajuda-element ajuda-left" style="--rows: span 1; --columns: 1 / -1;">
                         <div style="--rows: span 1; --columns: 1 / -1;">
-                            <img src="assets/img/Img - Marketplace.png" class="img-ajuda-center"
+                            <img src="assets/img/Img - Marketplace.png" class="img-ajuda-center" id="not-show"
+                                alt="Menina deitada utilizando notebook">
+                                <img src="assets/img/Img - Marketplace 2.png" class="img-ajuda-center" id="not-show-pc"
                                 alt="Menina deitada utilizando notebook">
                         </div>
                     </div>
                     <div class="ajuda-element ajuda-right" style="--rows: span 1; --columns: 1 / -1;">
-                        <div class="aboutex-element-bento-row bdr" style="--rows: span 1; --columns: 1 / -1;">
+                        <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
                             <br>
                             <H3> COMO AJUDAR?</H3>
-                            <P> Ajudar a EFIVI é uma tarefa simples, basta nos contatar caso você tenha eletrônicos,
+                            <P> Ajudar a EFIVI é uma tarefa simples, basta nos contatar caso você
+                                tenha eletrônicos,
                                 peças, ou
                                 aparelhos de informática que queira descartar. A ONG reutiliza-os como material de
                                 ensino para os alunos,
                                 e após disso eles tem o descarte adequado. </P>
-                            <div style="height: 15%;"></div>
+                            <div class="not-mobile" style="height: 15%;"></div>
                             <button class="btn">
                                 <div class="btn__bg">
                                     <span class="btn__bg__layer btn__bg__layer-first"></span>
@@ -166,13 +177,14 @@
                                 <span class="btn__text-in">Apoie a ONG</span>
                             </button>
                         </div>
-                        <div class="aboutex-element-bento-row bdr" style="--rows: span 1; --columns: 1 / -1;">
+                        <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
                             <br>
                             <H3> COMO SER AJUDADO?</H3>
-                            <P> Nós da EFIVI doamos peças e componentes de eletrônica para alunos de todo o Brasil. O
+                            <P> Nós da EFIVI doamos peças e componentes de eletrônica para alunos de
+                                todo o Brasil. O
                                 único requisito é ter uma anuência assinada pelo seu professor.<br> O envio é gratuito,
                                 despesas adicionais não são de responsabilidade da ONG. </P>
-                            <div style="height: 15%;"></div>
+                            <div class="not-mobile" style="height: 15%;"></div>
                             <button class="btn">
                                 <div class="btn__bg">
                                     <span class="btn__bg__layer btn__bg__layer-first"></span>
@@ -192,19 +204,20 @@
             <div class="sidebar-right"></div>
         </section>
     </div>
+    <div class="not-pc" style="height: 0.5rem;"></div>
     <footer>
         <div class="footer-1">
             <img src="assets/img/Logo - Footer.svg">
         </div>
         <div class="footer-2">
-            <div style="height: 2rem;"></div>
+            <div class="not-mobile" style="height: 2rem;"></div>
             <p>Rua Octávio Alves de Araujo, 68 - Tarraf 2 <span>Catanduva</span> - SP </p>
             <br>
             <div class="icones">
-                <a href="https://www.instagram.com/eficientevisual/" target="_blank">
+                <a href="https://wa.me/+5517981654034" target="_blank">
                     <img src="assets/img/Icon - Whatsapp.svg" alt="Whastapp">
                 </a>
-                <a href="https://www.facebook.com/eficientevisual" target="_blank">
+                <a href="https://www.facebook.com/p/EFIVI-Eficiente-Visual-100063726155111/" target="_blank">
                     <img src="assets/img/Icon - Facebook.svg" alt="Facebook">
                 </a>
                 <a href="https://www.linkedin.com/company/eficiente-visual/" target="_blank">
