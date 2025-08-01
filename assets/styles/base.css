@@ -1,4 +1,6 @@
-@media (max-width: 768px) {
+@media (max-width: 768px)
+/* Mobile styles */
+    {
     .not-mobile {
         display: none;
     }
@@ -9,6 +11,14 @@
 
     .navbar {
         min-block-size: 3vh;
+    }
+
+    .navbar button {
+        border-radius: 1ch;
+    }
+
+    .navbar-content {
+        border-radius: 1ch;
     }
 
     .navbar-content {
@@ -133,7 +143,7 @@
     }
 
     .aboutex-left img {
-        scale: 1.1;
+        scale: 1;
         top: 0;
     }
 
@@ -217,7 +227,7 @@
         gap: 2px;
     }
 
-    #not-show{
+    #not-show {
         display: none;
     }
 
@@ -227,6 +237,100 @@
         padding: 0.25ch 1.25ch 0.25ch 1.25ch;
         height: 2rem;
         width: 7rem;
+    }
+
+    .navbar-mkt {
+        height: 3vh;
+    }
+
+    .navbar-mkt__content {
+        font-size: 0.6rem;
+        gap: 3px;
+    }
+
+    .navbar-mkt__title {
+        font-size: 0.6rem;
+        height: 3vh;
+    }
+
+    .navbar-mkt__button {
+        font-size: 0.6rem;
+        height: 3vh;
+    }
+
+    .navbar-mkt__button--close {
+        font-size: 0.6rem;
+    }
+
+    .aboutex-content-mkt {
+        gap: 3px;
+        height: 50vh;
+    }
+
+    .mkt-description {
+        height: 4vh;
+        justify-content: space-between;
+        position: relative;
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        width: fill;
+        margin: 0 auto;
+        z-index: 3;
+        color: var(--text-dark);
+        padding: 0ch;
+        overflow-x: hidden;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        z-index: 3;
+        gap: 5px;
+        margin-top: -8vh;
+    }
+
+    .mkt-text-title {
+        font-size: 0.7rem;
+    }
+
+    .mkt-text-title span {
+        font-size: 0.8rem;
+    }
+
+    .mkt-text-button {
+        font-size: 0.7rem;
+    }
+
+    .aboutex-content-mkt {
+        width: 100%;
+    }
+
+    .ajuda-content-marketplace {
+        height: 50vh;
+    }
+
+    .aboutex-element-bento-row-mkt {
+        margin: 0 auto;
+        padding: 0;
+        height: 50vh;
+        width: 35vh;
+    }
+
+    .aboutex-element-bento-row-mkt img {
+        height: 20vh;
+        object-fit: cover;
+        zoom: 0.6;
+    }
+
+    #counter {
+        margin-top: 55rem;
+    }
+
+    .loading-first {
+        scale: 1.7;
     }
 
     footer {
@@ -277,12 +381,14 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px)
+/* Desktop styles */
+    {
     .not-pc {
         display: none;
     }
 
-    #not-show-pc{
+    #not-show-pc {
         display: none;
     }
 
@@ -294,9 +400,15 @@
         max-block-size: 10vh;
     }
 
+    .navbar button {
+        max-block-size: 10vh;
+        border-radius: 2ch;
+    }
+
     .navbar-content {
         grid-template-columns: 3fr 1fr 1fr 1fr;
         gap: 5px;
+        border-radius: 2ch;
     }
 
     .container {
@@ -361,6 +473,7 @@
     .about-element img {
         width: 100%;
         margin: auto;
+        object-fit: cover;
     }
 
     .about-element h3 {
@@ -423,6 +536,14 @@
     }
 
     .aboutex-left h3 {
+        margin-top: -5rem;
+    }
+
+    .aboutex-element-bento-row h3 {
+        margin-top: 2rem;
+    }
+
+    #ensino {
         margin-top: -5rem;
     }
 
@@ -489,6 +610,84 @@
         padding: 0.5ch 2.5ch 0.5ch 2.5ch;
         height: 4vw;
         width: 20vw;
+    }
+
+    .navbar-mkt {
+        height: 8vh;
+    }
+
+    .navbar-mkt__content {
+        font-size: 1.8rem;
+        gap: 5px;
+    }
+
+    .navbar-mkt__title {
+        font-size: 1.8rem;
+        height: 8vh;
+    }
+
+    .navbar-mkt__button {
+        font-size: 1.8rem;
+        height: 8vh;
+    }
+
+    .navbar-mkt__button--close {
+        font-size: 2.2rem;
+    }
+
+    .aboutex-content-mkt {
+        gap: 5px;
+        height: 100vh;
+        object-fit: scale-down;
+    }
+
+    .mkt-description {
+        height: 9vh;
+        justify-content: space-between;
+        position: relative;
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        width: fill;
+        margin: 0 auto;
+        z-index: 3;
+        color: var(--text-dark);
+        padding: 0ch;
+        overflow-x: hidden;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        z-index: 3;
+        gap: 5px;
+        margin-top: -20vh;
+    }
+
+    .mkt-text-title {
+        font-size: 1.5rem;
+    }
+
+    .mkt-text-title span {
+        font-size: 1.8rem;
+    }
+
+    .mkt-text-button {
+        font-size: 1.5rem;
+    }
+
+    .aboutex-content-mkt {
+        width: 100%;
+    }
+
+    .ajuda-content-marketplace {
+        height: 100vh;
+    }
+
+    #counter {
+        margin-top: 35rem;
     }
 
     footer {
@@ -596,6 +795,8 @@ h1 {
 
 h2 {
     color: var(--text-dark);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
 }
 
 h3 {
@@ -616,6 +817,49 @@ h3 {
     z-index: 5;
 }
 
+/*loading*/
+.loading {
+    height: 1500vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    background-color: var(--bg-dark);
+    z-index: 10;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.loading.hidden {
+    transform: translateY(30vh);
+    background: none;
+    opacity: 0;
+}
+
+#counter {
+    text-align: center;
+    line-height: 0%;
+    font-size: 20vw;
+    color: var(--text-white);
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+}
+
+.loading h2 {
+    text-align: center;
+    line-height: 0%;
+    font-size: 5vw;
+    color: var(--text-white);
+}
+
+.loading-first {
+    height: 100vh;
+}
+
+.loading-bg {
+    height: 1400vh;
+}
+
 /* navbar */
 
 .navbar {
@@ -624,6 +868,12 @@ h3 {
     width: 100%;
     margin: 0 auto;
     z-index: 3;
+}
+
+.navbar button {
+    border: none;
+    overflow: hidden;
+    cursor: none;
 }
 
 .navbar-content {
@@ -635,7 +885,6 @@ h3 {
 
 .navbar-element {
     background-color: var(--bg-light);
-    border-radius: 1ch;
     overflow-y: hidden;
 }
 
@@ -830,6 +1079,10 @@ h3 {
 
 .aboutex-element {
     background-color: var(--bg-dark);
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .aboutex-center,
@@ -876,6 +1129,11 @@ h3 {
     text-align: left;
 }
 
+.aboutex-element-bento-row button {
+    bottom: 0;
+    background-color: var(--bg-dark);
+}
+
 /* ajuda */
 
 .ajuda {
@@ -884,6 +1142,7 @@ h3 {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    min-height: fit-content;
 }
 
 .ajuda-content {
@@ -900,6 +1159,7 @@ h3 {
 .ajuda-element {
     overflow-x: hidden;
     overflow-y: hidden;
+    min-height: inherit;
 }
 
 .img-ajuda-center {
@@ -934,9 +1194,177 @@ h3 {
     word-spacing: -2%;
 }
 
+/* ajuda marketplace */
+
+.ajuda-content-marketplace {
+    top: 5px;
+    bottom: 5px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    display: grid;
+    min-height: inherit;
+    overflow: hidden;
+}
+
+.ajuda-content-marketplace button {
+    padding: 0;
+    border: none;
+    background-color: var(--bg-light);
+}
+
+#mkt {
+    margin-top: -0.4rem;
+}
+
+.navbar-mkt {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    min-height: inherit;
+    border-radius: 2ch;
+}
+
+.navbar-mkt {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 3;
+    color: var(--text-dark);
+    padding: 0ch;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar-mkt__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+}
+
+.navbar-mkt__title {
+    background-color: var(--bg-light);
+    border-radius: 1ch;
+    flex-grow: 2;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.navbar-mkt__button {
+    background-color: rebeccapurple;
+    border-radius: 1ch;
+    color: var(--text-dark);
+    cursor: none;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0.72;
+    font-weight: bold;
+}
+
+.navbar-mkt__button--close {
+    flex-grow: 0.3;
+}
+
+.aboutex-content-mkt {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.aboutex-content-mkt::-webkit-scrollbar {
+    display: none;
+}
+
+.aboutex-element-bento-row-mkt {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.aboutex-element-bento-row-mkt img {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.mkt-text-title {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    border-radius: 1ch;
+    flex-grow: 2.5;
+    flex-direction: column;
+    font-family: 'Urbanist', sans-serif;
+    text-align: start;
+    justify-content: center;
+    display: flex;
+    line-height: 95%;
+}
+
+
+.mkt-text-title span {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: bold;
+}
+
+.mkt-text-button {
+    background-color: rebeccapurple;
+    border-radius: 1ch;
+    height: 100%;
+    color: var(--text-light);
+    cursor: none;
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0.1;
+    font-weight: bold;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /*button hover effects thanks to Bogdan on codepen - codepen.io/Quiddlee/pen/MWPbKxg */
 
-.ajuda button {
+.ajuda-content button {
     font-weight: 500;
     font-family: 'Urbanist', sans-serif;
     background-color: transparent;

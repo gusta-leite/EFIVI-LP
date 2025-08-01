@@ -29,6 +29,16 @@
         </div>
     </section>
 
+    <div class="loading" style="display: block;">
+        <div class="loading-first">
+            <div id="counter">1</div>
+            <div class="not-mobile" style="height: 15%;"></div>
+            <div class="not-pc" style="height: 5%;"></div>
+            <h2> ⠉⠁⠗⠗⠑⠛⠁⠝⠙⠕ </h2>
+        </div>
+        <div class="loading-bg"> </div>
+    </div>
+
     <div class="container">
         <section class="sidebar" style="--rows: span 2; --columns: 1 / -1;">
             <div class="sidebar-left"></div>
@@ -36,23 +46,35 @@
         <div class="lp-container" style="--rows: span 2; --columns: 2 / -1;">
             <section class="navbar"> <!-- Navbar-->
                 <div class="navbar-content">
-                    <div class="navbar-element" style="--rows: span 2; --columns: 1 / -1;"">
-                        <h3 class=" navbar-text">EFVI - EFICIENTE VISUAL</h3>
-                    </div>
-                    <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"">
-                        <h3 class=" navbar-text">SOBRE NÓS</h3>
-                    </div>
-                    <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"">
-                        <h3 class=" navbar-text">NOSSO PROJETO</h3>
-                    </div>
-                    <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"">
-                        <h3 class=" navbar-text">CONTATO</h3>
-                    </div>
+                    <button>
+                        <div class="navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#hero', 1.5,);">
+                            <h3 class=" navbar-text">EFVI - EFICIENTE VISUAL</h3>
+                        </div>
+                    </button>
+                    <button>
+                        <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#sobre-nos', 1.5,);">
+                            <h3 class=" navbar-text">SOBRE NÓS</h3>
+                        </div>
+                    </button>
+                    <button>
+                        <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#projeto', 1.5,)">
+                            <h3 class=" navbar-text">NOSSO PROJETO</h3>
+                        </div>
+                    </button>
+                    <button>
+                        <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#ajuda', 1.5,)">
+                            <h3 class=" navbar-text">AJUDA</h3>
+                        </div>
+                    </button>
                 </div>
             </section>
             <div style="height: 5px;" class="not-mobile"></div>
             <div style="height: 2px;" class="not-pc"></div>
-            <section class=" hero"> <!-- Tela inicial-->
+            <section class=" hero" id="hero"> <!-- Tela inicial-->
                 <div class="hero-content">
                     <img src="assets/img/Img - Hero.png" alt="Mulher de Óculos" class="hero-image not-mobile">
                     <div class="hero-text-container">
@@ -68,7 +90,7 @@
             </section>
             <div style="height: 5px;" class="not-mobile"></div>
             <div style="height: 2px;" class="not-pc"></div>
-            <section class="about"> <!-- Sobre nos-->
+            <section class="about" id="sobre-nos"> <!-- Sobre nos-->
                 <div class="about-content">
                     <div class="about-element">
                         <br>
@@ -97,22 +119,20 @@
             </section>
             <div style="margin-top: 4px;" class="not-pc"></div>
             <div style="margin-top: 10px;" class="not-mobile"></div>
-            <section class="about-expanded"> <!-- Sobre nos expandido-->
+            <section class="about-expanded" id="projeto"> <!-- Sobre nos expandido-->
                 <div class="aboutex-content">
                     <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
                         <div class="aboutex-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
                             <img src="assets/img/Img - Left Aboutex.png" class="img-aboutex-center" alt="">
                         </div>
                         <div class="aboutex-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
-                            <br>
-                            <H3> ENSINO E CURSOS</H3>
+                            <H3 id="ensino"> ENSINO E CURSOS</H3>
                             <P> O projeto auxilia os alunos por meio de cursos na área eletrônica e informática como:
                                 <br>• Eletricista
                                 <br>• Reparo e manutenção de impressoras
                                 <br>• Montagem de computador
                                 <br>• Arduino
                                 <span class="not-mobile"><br>• Conserto de monitores</span>
-                                <span class="not-mobile"><br>• Reparo de lâmpadas Led</span>
                             </P>
                         </div>
                     </div>
@@ -145,59 +165,240 @@
             </section>
             <div style="height: 2px;" class="not-pc"></div>
             <div style="height: 5px;" class="not-mobile"></div>
-            <section class="ajuda"> <!-- ajuda e marketplace-->
-                <div class="ajuda-content">
-                    <div class="ajuda-element ajuda-left" style="--rows: span 1; --columns: 1 / -1;">
-                        <div style="--rows: span 1; --columns: 1 / -1;">
-                            <img src="assets/img/Img - Marketplace.png" class="img-ajuda-center" id="not-show"
-                                alt="Menina deitada utilizando notebook">
+            <section class="ajuda-mkt" id="ajuda">
+                <section class="ajuda content-section active" id="ajd"> <!-- ajuda e marketplace-->
+                    <div class="ajuda-content">
+                        <div class="ajuda-element ajuda-left" style="--rows: span 1; --columns: 1 / -1;">
+                            <div style="--rows: span 1; --columns: 1 / -1;">
+                                <img src="assets/img/Img - Marketplace.png" class="img-ajuda-center" id="not-show"
+                                    alt="Menina deitada utilizando notebook">
                                 <img src="assets/img/Img - Marketplace 2.png" class="img-ajuda-center" id="not-show-pc"
-                                alt="Menina deitada utilizando notebook">
+                                    alt="Menina deitada utilizando notebook">
+                            </div>
+                        </div>
+                        <div class="ajuda-element ajuda-right" style="--rows: span 1; --columns: 1 / -1;">
+                            <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                                <br>
+                                <H3> COMO AJUDAR?</H3>
+                                <P> Ajudar a EFIVI é uma tarefa simples, basta nos contatar caso você
+                                    tenha eletrônicos,
+                                    peças, ou
+                                    aparelhos de informática que queira descartar. A ONG reutiliza-os como material de
+                                    ensino para os alunos,
+                                    e após disso eles tem o descarte adequado. </P>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                                <button class="btn">
+                                    <div class="btn__bg">
+                                        <span class="btn__bg__layer btn__bg__layer-first"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-second"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-third"></span>
+                                    </div>
+
+                                    <span class="btn__text-out">Apoie a ONG</span>
+                                    <span class="btn__text-in">Apoie a ONG</span>
+                                </button>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                            </div>
+                            <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                                <br>
+                                <H3> COMO SER AJUDADO?</H3>
+                                <P> Nós da EFIVI doamos peças e componentes de eletrônica para alunos de
+                                    todo o Brasil. O
+                                    único requisito é ter uma anuência assinada pelo seu professor.<br> O envio é
+                                    gratuito,
+                                    despesas adicionais não são de responsabilidade da ONG. </P>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                                <button class="btn toggle-button active-btn" data-target="mkt">
+                                    <div class="btn__bg">
+                                        <span class="btn__bg__layer btn__bg__layer-first"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-second"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-third"></span>
+                                    </div>
+
+                                    <span class="btn__text-out">Ver marketplace</span>
+                                    <span class="btn__text-in">Ver marketplace</span>
+                                </button>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="ajuda-element ajuda-right" style="--rows: span 1; --columns: 1 / -1;">
-                        <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
-                            <br>
-                            <H3> COMO AJUDAR?</H3>
-                            <P> Ajudar a EFIVI é uma tarefa simples, basta nos contatar caso você
-                                tenha eletrônicos,
-                                peças, ou
-                                aparelhos de informática que queira descartar. A ONG reutiliza-os como material de
-                                ensino para os alunos,
-                                e após disso eles tem o descarte adequado. </P>
-                            <div class="not-mobile" style="height: 15%;"></div>
-                            <button class="btn">
-                                <div class="btn__bg">
-                                    <span class="btn__bg__layer btn__bg__layer-first"></span>
-                                    <span class="btn__bg__layer btn__bg__layer-second"></span>
-                                    <span class="btn__bg__layer btn__bg__layer-third"></span>
-                                </div>
+                </section>
 
-                                <span class="btn__text-out">Apoie a ONG</span>
-                                <span class="btn__text-in">Apoie a ONG</span>
-                            </button>
-                        </div>
-                        <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
-                            <br>
-                            <H3> COMO SER AJUDADO?</H3>
-                            <P> Nós da EFIVI doamos peças e componentes de eletrônica para alunos de
-                                todo o Brasil. O
-                                único requisito é ter uma anuência assinada pelo seu professor.<br> O envio é gratuito,
-                                despesas adicionais não são de responsabilidade da ONG. </P>
-                            <div class="not-mobile" style="height: 15%;"></div>
-                            <button class="btn">
-                                <div class="btn__bg">
-                                    <span class="btn__bg__layer btn__bg__layer-first"></span>
-                                    <span class="btn__bg__layer btn__bg__layer-second"></span>
-                                    <span class="btn__bg__layer btn__bg__layer-third"></span>
+                <section class="marketplace content-section" id="mkt">
+                    <div class="ajuda-content-marketplace">
+                        <nav class="navbar-mkt">
+                            <div class="navbar-mkt__content">
+                                <div class="navbar-mkt__title">
+                                    MATERIAL PARA DOAÇÕES
                                 </div>
+                                <button class="navbar-mkt__button">
+                                    CARRINHO
+                                </button>
+                                <button class="navbar-mkt__button navbar-mkt__button--close toggle-button active-btn"
+                                    data-target="ajd" aria-label="Fechar" id="toggleBtn">
+                                    X
+                                </button>
+                            </div>
+                        </nav>
+                        <div style="height: 2px;" class="not-pc"></div>
+                        <div style="height: 5px;" class="not-mobile"></div>
 
-                                <span class="btn__text-out">Ver marketplace</span>
-                                <span class="btn__text-in">Ver marketplace</span>
-                            </button>
+                        <div class="aboutex-content-mkt" id="scroll-container">
+                            <!-- imagem 1 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/01.png" class="img-aboutex-center not-mobile"
+                                        alt="">
+                                    <img src="assets/img/marketplace/01.png" class="img-aboutex-center not-pc" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀HARD DRIVE</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 2 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/02.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀CABOS E FONTES</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 3 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/03.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀PEÇAS DIVERSAS DE ELETRÔNICA</span>
+                                        ⠀Peças avulsas
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 4 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/04.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀MOTORES</span>
+                                        ⠀Vários tamanhos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 5 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/05.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀COOLERS</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 6 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/06.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀MONITORES</span>
+                                        ⠀Diversas marcas e tamanhos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 7 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/07.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀PILHAS E BATERIAS DE LÍTIO</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 8 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/08.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀TRANSFORMADOR DE MICROONDAS</span>
+                                        ⠀Várioas marcas
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 9 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/09.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀CAMERAS E CELULARES ANTIGOS</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 10 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/10.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀CONTROLES DE TV</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button" style="--rows: span 1; --columns: 1 / -1;">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </section>
         </div>
         <section class="sidebar" style="--rows: span 2; --columns: 1 / -1;">
@@ -232,6 +433,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 
