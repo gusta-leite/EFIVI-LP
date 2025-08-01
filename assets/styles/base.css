@@ -687,7 +687,7 @@
     }
 
     #counter {
-        margin-top: 35rem;
+        margin-top: 27rem;
     }
 
     footer {
@@ -805,6 +805,14 @@ h3 {
     font-weight: bold;
 }
 
+button {
+    cursor: none;
+}
+
+a {
+    cursor: none;
+}
+
 /* cursor */
 
 .cursor {
@@ -817,7 +825,30 @@ h3 {
     z-index: 5;
 }
 
+.cursorselect {
+    mix-blend-mode: exclusion;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+}
+
+.cursorbutton {
+    mix-blend-mode: exclusion;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+}
+
 /*loading*/
+
 .loading {
     height: 1500vh;
     width: 100vw;
@@ -839,7 +870,7 @@ h3 {
 #counter {
     text-align: center;
     line-height: 0%;
-    font-size: 20vw;
+    font-size: 30vw;
     color: var(--text-white);
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
@@ -1373,7 +1404,7 @@ h3 {
     position: relative;
     display: flex;
     margin: 0 auto;
-    cursor: pointer;
+    cursor: none;
     overflow: hidden;
     padding: 0;
 }
@@ -1381,7 +1412,7 @@ h3 {
 .btn {
     position: relative;
     border: none;
-    cursor: pointer;
+    cursor: none;
     overflow: hidden;
     background-color: transparent;
 }

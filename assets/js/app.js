@@ -1,14 +1,101 @@
 document.documentElement.style.cursor = 'none';
 
 // gsap to cursor
-gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
+  gsap.set(".cursorselect", { xPercent: -50, yPercent: -50, opacity: 0 });
+  gsap.set(".cursorbutton", { xPercent: -50, yPercent: -50, opacity: 0 });
 
-let xToCursor = gsap.quickTo(".cursor", "x", { duration: 0.4, ease: "power3" }),
-  yToCursor = gsap.quickTo(".cursor", "y", { duration: 0.4, ease: "power3" });
+  let xToCursor = gsap.quickTo(".cursor", "x", { duration: 0.4, ease: "power3" }),
+    yToCursor = gsap.quickTo(".cursor", "y", { duration: 0.4, ease: "power3" });
 
-window.addEventListener("mousemove", (e) => {
-  xToCursor(e.clientX);
-  yToCursor(e.clientY);
+  let xToCursorBtn = gsap.quickTo(".cursorbutton", "x", { duration: 0.4, ease: "power3" }),
+    yToCursorBtn = gsap.quickTo(".cursorbutton", "y", { duration: 0.4, ease: "power3" });
+
+  let xToSelect = gsap.quickTo(".cursorselect", "x", { duration: 0.6, ease: "power3" }),
+    yToSelect = gsap.quickTo(".cursorselect", "y", { duration: 0.6, ease: "power3" });
+
+
+  window.addEventListener("mousemove", (e) => {
+    xToCursor(e.clientX);
+    yToCursor(e.clientY);
+    xToCursorBtn(e.clientX);
+    yToCursorBtn(e.clientY);
+    xToSelect(e.clientX);
+    yToSelect(e.clientY);
+  });
+
+  document.querySelectorAll(".navbar-content").forEach((div) => {
+    div.addEventListener("mousemove", (e) => {
+      xToSelect(e.clientX);
+      yToSelect(e.clientY);
+    });
+
+    div.addEventListener("mouseleave", () => {
+      gsap.to(".cursorbutton", { opacity: 0, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 1, duration: 0.2 });
+    });
+
+    div.addEventListener("mouseenter", () => {
+      gsap.to(".cursorbutton", { opacity: 1, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 0, duration: 0.2 });
+    });
+
+  });
+
+  document.querySelectorAll(".navbar-mkt__content").forEach((button) => {
+    button.addEventListener("mousemove", (e) => {
+      xToSelect(e.clientX);
+      yToSelect(e.clientY);
+    });
+
+    button.addEventListener("mouseleave", () => {
+      gsap.to(".cursorbutton", { opacity: 0, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 1, duration: 0.2 });
+    });
+
+    button.addEventListener("mouseenter", () => {
+      gsap.to(".cursorbutton", { opacity: 1, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 0, duration: 0.2 });
+    });
+
+  });
+
+  document.querySelectorAll(".mkt-description").forEach((button) => {
+    button.addEventListener("mousemove", (e) => {
+      xToSelect(e.clientX);
+      yToSelect(e.clientY);
+    });
+
+    button.addEventListener("mouseleave", () => {
+      gsap.to(".cursorbutton", { opacity: 0, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 1, duration: 0.2 });
+    });
+
+    button.addEventListener("mouseenter", () => {
+      gsap.to(".cursorbutton", { opacity: 1, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 0, duration: 0.2 });
+    });
+
+  });
+
+  document.querySelectorAll(".aboutex-element-bento-row-mkt").forEach((img) => {
+    img.addEventListener("mousemove", (e) => {
+      xToSelect(e.clientX);
+      yToSelect(e.clientY);
+    });
+
+    img.addEventListener("mouseleave", () => {
+      gsap.to(".cursorselect", { opacity: 0, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 1, duration: 0.2 });
+    });
+
+    img.addEventListener("mouseenter", () => {
+      gsap.to(".cursorselect", { opacity: 1, duration: 0.2 });
+      gsap.to(".cursor", { opacity: 0, duration: 0.2 });
+    });
+
+  });
 });
 
 //
