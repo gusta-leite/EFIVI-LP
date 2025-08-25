@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const botaoGerarLink = document.getElementById('gerarLinkBtn');
     const botaoLimpar = document.getElementById('btnLimpar');
     const displayContador = document.getElementById('contador-linhas');
-    const SERVER_URL = ''; 
+    const SERVER_URL = '';
+
+    let mensagemAcumulada = "";
 
     function atualizarContador(texto) {
         if (!texto || texto.trim() === "") {
@@ -15,76 +17,48 @@ document.addEventListener('DOMContentLoaded', () => {
         const itens = texto.split('\n\n');
         displayContador.textContent = itens.length;
     }
-    
-    async function carregarDadosIniciais() {
-        try {
-            const response = await fetch(`${SERVER_URL}/api/data`);
-            if (!response.ok) return;
-            const data = await response.json();
-            campoMensagem.value = data.selectedMessage;
-            atualizarContador(data.selectedMessage);
-        } catch (error) {
-            console.error("Falha ao carregar dados iniciais", error);
-        }
-    }
 
     botoesProduto.forEach(botao => {
-        botao.addEventListener('click', async () => {
+        botao.addEventListener('click', () => {
             const mensagemProduto = botao.dataset.message;
-            try {
-                const response = await fetch(`${SERVER_URL}/api/update-message`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: mensagemProduto }),
-                });
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    throw new Error(errorData.error || `O servidor respondeu com status ${response.status}`);
-                }
-                const data = await response.json();
-                campoMensagem.value = data.new_message;
-                atualizarContador(data.new_message);
-            } catch (error) {
-                alert(`Falha ao adicionar o item:\n${error.message}`);
+            if (mensagemAcumulada) {
+                mensagemAcumulada += '\n\n';
             }
+            mensagemAcumulada += mensagemProduto;
+            campoMensagem.value = mensagemAcumulada;
+            atualizarContador(mensagemAcumulada);
         });
     });
 
-    botaoLimpar.addEventListener('click', async () => {
-        try {
-            const response = await fetch(`${SERVER_URL}/api/reset-message`, { method: 'POST' });
-            if (!response.ok) throw new Error('Falha ao limpar a mensagem no servidor.');
-            campoMensagem.value = "";
-            atualizarContador("");
-            alert('Mensagem reiniciada!');
-        } catch (error) {
-            alert(error.message);
-        }
+    botaoLimpar.addEventListener('click', () => {
+        mensagemAcumulada = "";
+        campoMensagem.value = "";
+        atualizarContador("");
     });
 
     botaoGerarLink.addEventListener('click', async () => {
+        if (!mensagemAcumulada || mensagemAcumulada.trim() === "") {
+            alert('O carrinho está vazio.');
+            return;
+        }
         try {
-            const response = await fetch(`${SERVER_URL}/api/data`);
-            if (!response.ok) throw new Error('Não foi possível carregar os dados do servidor.');
 
-            const data = await response.json();
-            const { whatsapp_link, selectedMessage } = data;
+            const response = await fetch(`${SERVER_URL}/api/config`);
+            if (!response.ok) throw new Error('Não foi possível carregar a configuração do servidor.');
+            
+            const config = await response.json();
+            const { whatsapp_link } = config;
 
-            if (!selectedMessage || selectedMessage.trim() === "") {
-                alert('A mensagem está vazia. Adicione um item primeiro.');
-                return;
-            }
+            if (!whatsapp_link) throw new Error('Link do WhatsApp não encontrado na configuração.');
+
             const mensagemBase = "Olá! Tenho interesse nos seguintes itens:\n\n";
-            const mensagemCompleta = mensagemBase + selectedMessage;
+            const mensagemCompleta = mensagemBase + mensagemAcumulada;
             const mensagemCodificada = encodeURIComponent(mensagemCompleta);
             const linkFinal = `${whatsapp_link}?text=${mensagemCodificada}`;
 
             window.open(linkFinal, '_blank');
-
         } catch (error) {
-            console.error("Erro capturado no front-end:", error);
             alert(`Falha ao gerar o link:\n${error.message}`);
         }
     });
-    carregarDadosIniciais();
 });

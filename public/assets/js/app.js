@@ -139,7 +139,7 @@ function sleep(seconds) {
 const loading = document.querySelector(".loading");
 
 window.addEventListener('load', function () {
-  sleep(3, 5).then(() => {
+  sleep(2, 2).then(() => {
     loading.classList.add('hidden');
     setTimeout(() => {
       loading.style.display = 'none';
