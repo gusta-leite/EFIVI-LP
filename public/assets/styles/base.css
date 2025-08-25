@@ -239,6 +239,11 @@
         width: 7rem;
     }
 
+    .ajuda-content button {
+        scale: 0.7;
+        top: -0.3rem;
+    }
+
     .navbar-mkt {
         height: 3vh;
     }
@@ -728,27 +733,29 @@
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px)
+/* for  very small devices*/
+    {
     .minuscle {
         display: none;
     }
 
     h3 {
-        scale: 0.95;
+        scale: 0.90;
     }
 
     p {
-        scale: 0.95;
+        scale: 0.90;
     }
 
-    .btn{
+    .btn {
         scale: 0.90;
         padding: 0.1rem;
     }
 
-    .hero-image{
-        scale: 0.8;
-        margin-top: -3rem;
+    .hero-image {
+        scale: 1;
+        margin-top: -1rem;
     }
 }
 

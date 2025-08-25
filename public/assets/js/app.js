@@ -126,7 +126,7 @@ const counterElement = document.getElementById('counter');
 
 gsap.to(counterObject, {
   value: 99,
-  duration: 3,
+  duration: 2,
   ease: "power1.out",
   onUpdate: function () {
     counterElement.textContent = Math.floor(counterObject.value);
@@ -139,7 +139,7 @@ function sleep(seconds) {
 const loading = document.querySelector(".loading");
 
 window.addEventListener('load', function () {
-  sleep(2, 2).then(() => {
+  sleep(2,9).then(() => {
     loading.classList.add('hidden');
     setTimeout(() => {
       loading.style.display = 'none';
