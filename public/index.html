@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/styles/base.css">
+    <title>Eficiente Visual</title>
+</head>
+
+<body class="">
+    <section class="not-mobile"> <!-- Cursores-->
+        <div class="cursor">
+            <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:exclusion">
+                    <path
+                        d="M0 30C0 13.4315 13.4315 0 30 0V0C46.5685 0 60 13.4315 60 30V30C60 46.5685 46.5685 60 30 60V60C13.4315 60 0 46.5685 0 30V30Z"
+                        fill="#E6EBE0" />
+                </g>
+            </svg>
+        </div>
+        <div class="cursorselect">
+            <svg width="60" height="50" viewBox="0 0 130 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:exclusion">
+                    <path
+                        d="M100 0C116.569 0 130.001 13.4314 130.001 30C130.001 46.5687 116.569 60.001 100 60.001H30.001C13.4323 60.001 0 46.5687 0 30C0.000160814 13.4314 13.4324 0 30.001 0H100ZM94.6025 18.7939C91.2217 17.1035 87.2432 19.5619 87.2432 23.3418V38.1729C87.2432 41.9528 91.2217 44.4111 94.6025 42.7207L109.434 35.3057C113.181 33.4318 113.181 28.0829 109.434 26.209L94.6025 18.7939ZM42.7568 22.6279C42.7568 18.848 38.7793 16.3896 35.3984 18.0801L20.5664 25.4951C16.819 27.3691 16.8189 32.7179 20.5664 34.5918L35.3984 42.0068C38.7793 43.6973 42.7568 41.2389 42.7568 37.459V22.6279Z"
+                        fill="#E6EBE0" />
+                </g>
+            </svg>
+        </div>
+        <div class="cursorbutton">
+            <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g style="mix-blend-mode:exclusion">
+                    <path
+                        d="M100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50ZM12.8476 50C12.8476 70.5187 29.4813 87.1524 50 87.1524C70.5187 87.1524 87.1524 70.5187 87.1524 50C87.1524 29.4813 70.5187 12.8476 50 12.8476C29.4813 12.8476 12.8476 29.4813 12.8476 50Z"
+                        fill="#E6EBE0" />
+                    <path
+                        d="M87 50C87 70.4345 70.4345 87 50 87C29.5655 87 13 70.4345 13 50C13 29.5655 29.5655 13 50 13C70.4345 13 87 29.5655 87 50Z"
+                        fill="#9A9CBC" />
+                </g>
+            </svg>
+
+        </div>
+    </section>
+
+    <div class="loading" style="display: none;">
+        <div class="loading-first">
+            <div id="counter">1</div>
+            <div class="not-mobile" style="height: 22%;"></div>
+            <div class="not-pc" style="height: 5%;"></div>
+            <h2> ⠉⠁⠗⠗⠑⠛⠁⠝⠙⠕ </h2>
+        </div>
+        <div class="loading-bg"> </div>
+    </div>
+
+    <div class="container">
+        <section class="sidebar" style="--rows: span 2; --columns: 1 / -1;">
+            <div class="sidebar-left"></div>
+        </section>
+        <div class="lp-container" style="--rows: span 2; --columns: 2 / -1;">
+            <section class="navbar"> <!-- Navbar-->
+                <div class="navbar-content">
+                    <button>
+                        <div class="navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#hero', 1.5,);">
+                            <h3 class=" navbar-text">EFVI - EFICIENTE VISUAL</h3>
+                        </div>
+                    </button>
+                    <button>
+                        <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#sobre-nos', 1.5,);">
+                            <h3 class=" navbar-text">SOBRE NÓS</h3>
+                        </div>
+                    </button>
+                    <button>
+                        <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#projeto', 1.5,)">
+                            <h3 class=" navbar-text">NOSSO PROJETO</h3>
+                        </div>
+                    </button>
+                    <button>
+                        <div class=" navbar-element" style="--rows: span 2; --columns: 1 / -1;"
+                            onclick="event.preventDefault(); smoothScrollGSAP('#ajuda', 1.5,)">
+                            <h3 class=" navbar-text">AJUDA</h3>
+                        </div>
+                    </button>
+                </div>
+            </section>
+            <div style="height: 5px;" class="not-mobile"></div>
+            <div style="height: 2px;" class="not-pc"></div>
+            <section class=" hero" id="hero"> <!-- Tela inicial-->
+                <div class="hero-content">
+                    <img src="assets/img/Img - Hero.png" alt="Mulher de Óculos" class="hero-image not-mobile">
+                    <div class="hero-text-container">
+                        <div class="not-mobile"><br><br><br></div>
+                        <br>
+                        <h3>EFIVI - EFICIENTE VISUAL</h3>
+                        <h1>VENDO O MUNDO</h1>
+                        <p>Através da <span>tecnologia</span></p>
+                        <p>⠞⠑⠉⠝⠕⠇⠕⠛⠊⠁</p>
+                    </div>
+                    <img src="assets/img/Img - Hero.png" alt="Mulher de Óculos" class="hero-image not-pc">
+                </div>
+            </section>
+            <div style="height: 5px;" class="not-mobile"></div>
+            <div style="height: 2px;" class="not-pc"></div>
+            <section class="about" id="sobre-nos"> <!-- Sobre nos-->
+                <div class="about-content">
+                    <div class="about-element">
+                        <br>
+                        <H3> QUEM SOMOS NÓS?</H3>
+                        <P> Desde 2009 a EFIVI ajuda deficientes visuais da cidade de Catanduva por meio de aulas de
+                            eletrônica.
+                            Nesses mais de 15 anos cerca de 300 alunos foram beneficiados pelo projeto. </P>
+                    </div>
+                    <div class="about-element">
+                        <img src="assets/img/Img - About Us.png">
+                    </div>
+                    <div class="about-element">
+                        <br>
+                        <H3>NOSSO OBJETIVO</H3>
+                        <P> A ONG tem como objetivo auxiliar o desenvolvimento educacional, digital, cultural, social e
+                            profissional do deficiente visual, integrando-o na sociedade. </P>
+                    </div>
+                </div>
+                <div style="height: 2px;" class="not-pc"></div>
+                <div style="height: 5px;" class="not-mobile"></div>
+                <div class="headline">
+
+                    <h1> INCLUSÃO E FUTURO, <span>JUNTOS</span> </h1>
+                    <h1 class="headline-braile"> ⠞⠑⠉⠝⠕⠇⠕⠛⠊⠁ ⠑ ⠋⠥⠞⠥⠗⠕ </h1>
+                </div>
+            </section>
+            <div style="margin-top: 4px;" class="not-pc"></div>
+            <div style="margin-top: 10px;" class="not-mobile"></div>
+            <section class="about-expanded" id="projeto"> <!-- Sobre nos expandido-->
+                <div class="aboutex-content">
+                    <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                        <div class="aboutex-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                            <img src="assets/img/Img - Left Aboutex.png" class="img-aboutex-center" alt="">
+                        </div>
+                        <div class="aboutex-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                            <H3 id="ensino"> ENSINO E CURSOS</H3>
+                            <P> O projeto auxilia os alunos por meio de cursos na área eletrônica e informática como:
+                                <br>• Eletricista
+                                <br>• Reparo e manutenção de impressoras
+                                <br>• Montagem de computador
+                                <br>• Arduino
+                                <span class="not-mobile"><br>• Conserto de monitores</span>
+                            </P>
+                        </div>
+                    </div>
+                    <div class="aboutex-element aboutex-center" style="--rows: span 1; --columns: 1 / -1;">
+                        <div class="aboutex-element-bento-row bdr" style="--rows: span 1; --columns: 1 / -1;">
+                            <br>
+                            <H3> NOSSOS ALUNOS</H3>
+                            <P> Nossos alunos completam o curso com conhecimentos que permitem uma
+                                melhor integração no mercado de trabalho.
+                                Veja abaixo, nossos antigos alunos: </P>
+                        </div>
+                        <div style="--rows: span 1; --columns: 1 / -1;">
+                            <img src="assets/img/Img - Center Aboutex.png" class="img-aboutex-center bdr"
+                                alt="Alunos do curso">
+                        </div>
+                    </div>
+                    <div class="aboutex-element aboutex-right" style="--rows: span 1; --columns: 1 / -1;">
+                        <div class="aboutex-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                            <br>
+                            <H3> O PAPEL DA TECNOLOGIA</H3>
+                            <P> A ONG arrecada materiais eletrônicos para as aulas, tirando-os do descarte irregular
+                                para ajudar os alunos. Assim trazendo uma lição não só técnica, mas também de
+                                sustentabilidade. </P>
+                        </div>
+                        <div class="aboutex-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                            <img src="assets/img/Img - Right Aboutex.png" class="img-aboutex-right" alt="Teclado">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div style="height: 2px;" class="not-pc"></div>
+            <div style="height: 5px;" class="not-mobile"></div>
+            <section class="ajuda-mkt" id="ajuda">
+                <section class="ajuda content-section active" id="ajd"> <!-- ajuda e marketplace-->
+                    <div class="ajuda-content">
+                        <div class="ajuda-element ajuda-left" style="--rows: span 1; --columns: 1 / -1;">
+                            <div style="--rows: span 1; --columns: 1 / -1;">
+                                <img src="assets/img/Img - Marketplace.png" class="img-ajuda-center" id="not-show"
+                                    alt="Menina deitada utilizando notebook">
+                                <img src="assets/img/Img - Marketplace 2.png" class="img-ajuda-center" id="not-show-pc"
+                                    alt="Menina deitada utilizando notebook">
+                            </div>
+                        </div>
+                        <div class="ajuda-element ajuda-right" style="--rows: span 1; --columns: 1 / -1;">
+                            <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                                <br>
+                                <H3> COMO AJUDAR?</H3>
+                                <P> Ajudar a EFIVI é uma tarefa simples, basta nos contatar caso você
+                                    tenha eletrônicos,
+                                    peças, ou
+                                    aparelhos de informática que queira descartar. A ONG reutiliza-os como material de
+                                    ensino para os alunos,
+                                    e após disso eles tem o descarte adequado. </P>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                                <button class="btn">
+                                    <div class="btn__bg">
+                                        <span class="btn__bg__layer btn__bg__layer-first"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-second"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-third"></span>
+                                    </div>
+
+                                    <span class="btn__text-out">Apoie a ONG</span>
+                                    <span class="btn__text-in">Apoie a ONG</span>
+                                </button>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                            </div>
+                            <div class="ajuda-element-bento-row" style="--rows: span 1; --columns: 1 / -1;">
+                                <br>
+                                <H3> COMO SER AJUDADO?</H3>
+                                <P> Nós da EFIVI doamos peças e componentes de eletrônica para alunos de
+                                    todo o Brasil. O
+                                    único requisito é ter uma anuência assinada pelo seu professor.<br> O envio é
+                                    gratuito,
+                                    despesas adicionais não são de responsabilidade da ONG. </P>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                                <button class="btn toggle-button active-btn" data-target="mkt">
+                                    <div class="btn__bg">
+                                        <span class="btn__bg__layer btn__bg__layer-first"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-second"></span>
+                                        <span class="btn__bg__layer btn__bg__layer-third"></span>
+                                    </div>
+
+                                    <span class="btn__text-out">Ver marketplace</span>
+                                    <span class="btn__text-in">Ver marketplace</span>
+                                </button>
+                                <div class="not-mobile" style="height: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="marketplace content-section" id="mkt">
+                    <div class="ajuda-content-marketplace">
+                        <nav class="navbar-mkt">
+                            <div class="navbar-mkt__content">
+                                <div class="navbar-mkt__title">
+                                    MATERIAL PARA DOAÇÕES
+                                </div>
+                                <button class="navbar-mkt__button">
+                                    CARRINHO⠀<span id="contador-linhas">0</span>
+                                </button>
+                                <button id="btnLimpar" class="navbar-mkt__button">LIMPAR CARRINHO</button>
+                                <button class="navbar-mkt__button" id="gerarLinkBtn">
+                                    AVANÇAR
+                                </button>
+                                <textarea id="mensagem" style="display: none;"
+                                    placeholder="Sua mensagem será construída aqui..."></textarea>
+                                <button class="navbar-mkt__button navbar-mkt__button--close toggle-button active-btn"
+                                    data-target="ajd" aria-label="Fechar" id="toggleBtn">
+                                    X
+                                </button>
+                            </div>
+                        </nav>
+                        <div style="height: 2px;" class="not-pc"></div>
+                        <div style="height: 5px;" class="not-mobile"></div>
+
+                        <div class="aboutex-content-mkt" id="scroll-container">
+                            <!-- imagem 1 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/01.png" class="img-aboutex-center not-mobile"
+                                        alt="">
+                                    <img src="assets/img/marketplace/01.png" class="img-aboutex-center not-pc" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀HARD DRIVE</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Hard Drive - Vários modelos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 2 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/02.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀CABOS E FONTES</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Cabos e Fontes - Vários modelos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 3 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/03.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀PEÇAS DIVERSAS DE ELETRÔNICA</span>
+                                        ⠀Peças avulsas
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Peças diversas de eletrônica - Peças avulsas.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 4 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/04.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀MOTORES</span>
+                                        ⠀Vários tamanhos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Motores - Vários tamanhos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 5 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/05.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀COOLERS</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Coolers - Vários modelos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 6 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/06.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀MONITORES</span>
+                                        ⠀Diversas marcas e tamanhos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Monitores - Diversas marcas e tamanhos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 7 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/07.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀PILHAS E BATERIAS DE LÍTIO</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Pilhas e Baterias de Lítio - Vários modelos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 8 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/08.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀TRANSFORMADOR DE MICROONDAS</span>
+                                        ⠀Várioas marcas
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Transformador de Microondas - Várias marcas.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 9 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/09.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀CAMERAS E CELULARES ANTIGOS</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Cameras e Celulares Antigos - Vários modelos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- imagem 10 -->
+                            <div class="aboutex-element aboutex-left" style="--rows: span 1; --columns: 1 / -1;">
+                                <div class="aboutex-element-bento-row-mkt" style="--rows: span 1; --columns: 1 / -1;">
+                                    <img src="assets/img/marketplace/10.png" class="img-aboutex-center" alt="">
+                                </div>
+                                <div class="mkt-description">
+                                    <button class="mkt-text-title" style="--rows: span 1; --columns: 1 / -1;">
+                                        <span>⠀CONTROLES DE TV</span>
+                                        ⠀Vários modelos
+                                    </button>
+                                    <button class="mkt-text-button btn-produto"
+                                        style="--rows: span 1; --columns: 1 / -1;"
+                                        data-message="Controles de TV - Vários modelos.">
+                                        ADICIONAR
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <section class="sidebar" style="--rows: span 2; --columns: 1 / -1;">
+            <div class="sidebar-right"></div>
+        </section>
+    </div>
+    <div class="not-pc" style="height: 0.5rem;"></div>
+    <footer>
+        <div class="footer-1">
+            <img src="assets/img/Logo - Footer.svg">
+        </div>
+        <div class="footer-2">
+            <div class="not-mobile" style="height: 2rem;"></div>
+            <p>Rua Octávio Alves de Araujo, 68 - Tarraf 2 <span>Catanduva</span> - SP </p>
+            <br>
+            <div class="icones">
+                <a href="https://wa.me/+5517981654034" target="_blank">
+                    <img src="assets/img/Icon - Whatsapp.svg" alt="Whastapp">
+                </a>
+                <a href="https://www.facebook.com/p/EFIVI-Eficiente-Visual-100063726155111/" target="_blank">
+                    <img src="assets/img/Icon - Facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/company/eficiente-visual/" target="_blank">
+                    <img src="assets/img/Icon - Email.svg" alt="Email">
+                </a>
+                <a href="https://gustaleite.vercel.app/" target="_blank" class="portifolio">
+                    <img src="assets/img/Icon - Gustavo.svg" alt="Gustavo Leite">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/whatsapp.js" defer></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
