@@ -139,7 +139,7 @@ function sleep(seconds) {
 const loading = document.querySelector(".loading");
 
 window.addEventListener('load', function () {
-  sleep(2,9).then(() => {
+  sleep(2, 9).then(() => {
     loading.classList.add('hidden');
     setTimeout(() => {
       loading.style.display = 'none';
@@ -235,5 +235,30 @@ toggleButtons.forEach(button => {
     if (targetSection) {
       targetSection.classList.add('active');
     }
+  });
+});
+
+//copy to clipboard
+
+const botaoCopiar = document.getElementById('botaoCopiar');
+const textoOut = botaoCopiar.querySelector('.btn__text-out');
+const textoIn = botaoCopiar.querySelector('.btn__text-in');
+
+const textoOriginal = textoOut.textContent;
+
+botaoCopiar.addEventListener('click', () => {
+  const textoParaCopiar = "http://00020101021126790014BR.GOV.BCB.PIX2557pix-qr.mercadopago.com/instore/ol/v2/rZJ0evxAREPLIJerTC4Z5204000053039865802BR5924EFIVI";
+
+  navigator.clipboard.writeText(textoParaCopiar).then(() => {
+    textoOut.textContent = 'Pix Copiado!';
+    textoIn.textContent = 'Pix Copiado!';
+
+    setTimeout(() => {
+      textoOut.textContent = textoOriginal;
+      textoIn.textContent = textoOriginal;
+    }, 2000);
+
+  }).catch(err => {
+    console.error('Erro ao tentar copiar o texto: ', err);
   });
 });
